@@ -1,0 +1,98 @@
+\ProvidesPackage{beamerthemeAgimus}
+
+\mode<presentation>
+
+\RequirePackage{appendixnumberbeamer}
+\RequirePackage{beamerthememetropolis}
+
+\metroset{
+	block=fill,
+	progressbar=frametitle,
+	subsectionpage=simple,
+	numbering=none}
+
+\usefonttheme{professionalfonts}
+
+\titlegraphic{%
+	\includegraphics[width=3.6cm]{agimus.pdf}
+}
+
+\definecolor{bleuLAAS}{rgb}{0.18,0.35,0.55}
+\definecolor{orangeLAAS}{RGB}{255,184,0}
+\definecolor{rougeLAAS}{RGB}{197,50,83}
+
+\definecolor{agimusred}{RGB}{238,67,35}
+\definecolor{agimusgrey}{RGB}{94,95,97}
+\definecolor{agimuslightgrey}{rgb}{0.929,0.937,.941}
+\definecolor{paleaqua}{rgb}{0.74, 0.83, 0.9}
+\definecolor{pastelblue}{rgb}{0.68, 0.78, 0.81}
+
+\defbeamertemplatealias{itemize item}{triangle}{default}
+\setbeamertemplate{itemize item}[default]
+
+\setbeamertemplate{section in toc}[square]
+\setbeamertemplate{subsection in toc}[default]
+\setbeamercolor{palette primary}{%
+	bg=structure.fg,
+	fg=normal text.bg
+}
+\setbeamercolor{background canvas}{bg=agimusred!1}
+\setbeamercolor{frametitle}{bg=agimusred!85}
+
+\setbeamercolor{structure}{fg=agimusred}
+\setbeamercolor{palette primary}{%
+	bg=structure.fg,
+	fg=normal text.bg
+}
+
+\setlength{\metropolis@frametitle@padding}{1.4ex}
+
+\defbeamertemplate{frametitle}{thin}{%
+	\nointerlineskip%
+	\begin{beamercolorbox}[%
+		wd=\paperwidth,%
+		sep=0pt,%
+		leftskip=\metropolis@frametitle@padding,%
+		rightskip=\metropolis@frametitle@padding,%
+	]{frametitle}%
+	\metropolis@frametitlestrut@start%
+	\insertframetitle%
+	\nolinebreak%
+	\metropolis@frametitlestrut@end%
+	\end{beamercolorbox}%
+}
+\setbeamertemplate{frametitle}[thin]
+
+\setbeamertemplate{author}{
+    \vspace*{1em}
+    \centering\insertauthor%
+    \par%
+    \vspace*{0.25em}
+}
+\setbeamertemplate{institute}{
+    \centering\insertinstitute%
+    \par%
+}
+
+\logo{%
+	\includegraphics[height=6ex]{agimus.pdf}
+}
+
+\setbeamertemplate{sidebar right}{}
+\addtobeamertemplate{footline}{
+	\hspace*{\paperwidth-\widthof{\insertlogo}}\insertlogo%
+	\vspace*{1ex}%
+}{}
+
+\defbeamertemplatealias{itemize item}{triangle}{default}
+\setbeamertemplate{itemize item}[default]
+
+\setbeamerfont{bibliography item}{size=\scriptsize}
+\setbeamerfont{bibliography entry author}{size=\scriptsize}
+\setbeamerfont{bibliography entry title}{size=\scriptsize}
+\setbeamerfont{bibliography entry location}{size=\scriptsize}
+\setbeamerfont{bibliography entry note}{size=\scriptsize}
+
+\mode<all>
+
+\endinput
