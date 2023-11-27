@@ -1,0 +1,46 @@
+\documentclass[
+    xcolor={dvipsnames},
+    aspectratio=169
+]{beamer}
+
+\usepackage{mathtools}
+\usepackage{lipsum}
+
+\usepackage{microtype}
+\usepackage[style=ieee,backend=biber]{biblatex}
+
+\usetheme{Agimus}
+
+\bibliography{agimus-theme-example.bib}
+
+\newcommand{\bmnu}{\bm{\nu}}
+
+\title{%
+    {\small AGIMUS WINTER SCHOOL 2023}\\
+    \MakeUppercase{Course Name}
+}
+
+\author{John Author}
+\institute{Institute}
+\date{}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}{Lorem ipsum}
+    \lipsum[1]
+    $$
+        e^{i\pi} + 1 = 0
+    $$
+\end{frame}
+
+\nocite{*}
+
+\begin{frame}
+    \printbibliography{}
+\end{frame}
+
+
+\end{document}
